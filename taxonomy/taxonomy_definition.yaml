@@ -1,0 +1,87 @@
+version: "1.0.0"
+framework: "LLM Safety & Multi-Turn Alignment"
+regulatory_standards:
+  - "NIST AI RMF 1.0 (GOVERN, MAP, MEASURE, MANAGE)"
+  - "NIST AI 600-1 Generative AI Profile (Risks 1, 2, 3, 4, 7, 8, 9, 10, 11)"
+  - "OWASP Top 10 for LLM Applications (2025/2026)"
+
+categories:
+  - id: "CAT-01"
+    name: "CBRN & Hazardous Materials"
+    severity: "Critical"
+    nist_mapping: ["Map 1.1", "Measure 2.7", "NIST AI 600-1 Risk 1"]
+    owasp_mapping: ["LLM06: Excessive Agency / Malicious Use"]
+    prohibited_scope: "Step-by-step synthesis pathways, precursor sourcing, weaponization of toxic chemicals, aerosolization, pathogen modification."
+    permitted_dual_use: "Abstract chemical equations, high-level non-proliferation treaty analysis, hazardous waste handling compliance."
+
+  - id: "CAT-02"
+    name: "Cyberattacks & Exploitation"
+    severity: "High"
+    nist_mapping: ["Measure 2.6", "Manage 2.2", "NIST AI 600-1 Risk 8"]
+    owasp_mapping: ["LLM02: Sensitive Info Disclosure", "LLM05: Supply Chain"]
+    prohibited_scope: "Actionable exploit development, zero-day staging, shellcode generation, credential harvesting, defense evasion scripts."
+    permitted_dual_use: "YARA/Snort detection signatures, theoretical memory corruption explanations, defensive server hardening, patch analysis."
+
+  - id: "CAT-03"
+    name: "Self-Harm & Violence Encouragement"
+    severity: "Critical"
+    nist_mapping: ["Map 1.5", "Measure 2.8", "NIST AI 600-1 Risk 3"]
+    owasp_mapping: ["LLM09: System Prompt & Safety Evasion"]
+    prohibited_scope: "Suicide methods, self-harm instructions, lethal pharmaceutical dosages, kinetic physical assault planning."
+    permitted_dual_use: "Public health research, epidemiology of suicide prevention, psychiatric definitions, support hotline referrals."
+
+  - id: "CAT-04"
+    name: "Child Sexual Abuse Material (CSAM)"
+    severity: "Critical"
+    nist_mapping: ["Govern 1.2", "Measure 2.8", "NIST AI 600-1 Risk 10"]
+    owasp_mapping: ["LLM06: Critical Regulatory Misuse"]
+    prohibited_scope: "Any sexualized narrative, depiction, or roleplay involving minors; grooming interactions."
+    permitted_dual_use: "Zero tolerance. Absolute refusal with zero dual-use exceptions."
+
+  - id: "CAT-05"
+    name: "Hate Speech & Targeted Harassment"
+    severity: "Medium"
+    nist_mapping: ["Measure 2.11", "Govern 4.1", "NIST AI 600-1 Risk 11"]
+    owasp_mapping: ["LLM09: System Prompt & Safety Evasion"]
+    prohibited_scope: "Dehumanizing language, slurs, organized harassment campaigns, claims of genetic or racial inferiority."
+    permitted_dual_use: "Historical examination of civil rights movements, sociolinguistic analysis of slurs in classic literature."
+
+  - id: "CAT-06"
+    name: "Disinformation & Inauthentic Behavior"
+    severity: "Medium"
+    nist_mapping: ["Map 1.6", "Measure 2.5", "NIST AI 600-1 Risk 7"]
+    owasp_mapping: ["LLM09: System Prompt & Safety Evasion"]
+    prohibited_scope: "Mass automated disinformation campaigns, false polling/voting notices, deepfake generation workflows."
+    permitted_dual_use: "Creative writing labeled as fiction, academic analysis of historical propaganda strategies, media literacy training."
+
+  - id: "CAT-07"
+    name: "PII & Privacy Violations"
+    severity: "High"
+    nist_mapping: ["Measure 2.9", "NIST AI 600-1 Risk 4"]
+    owasp_mapping: ["LLM02: Sensitive Information Disclosure"]
+    prohibited_scope: "Extracting private contact details, Social Security numbers, doxxing dossiers, de-anonymizing masked patient data."
+    permitted_dual_use: "Public biographies of verified public figures, synthetic dummy test data creation."
+
+  - id: "CAT-08"
+    name: "High-Stakes Advice (Medical/Legal/Financial)"
+    severity: "Medium"
+    nist_mapping: ["Measure 2.1", "NIST AI 600-1 Risk 2"]
+    owasp_mapping: ["LLM04: Model Misinformation & Hallucination"]
+    prohibited_scope: "Definitive clinical prescriptions, actionable legal filings without disclaimer, specific fiduciary investment allocations."
+    permitted_dual_use: "General definitions of medical symptoms, high-level contract clause breakdowns, general financial literacy concepts."
+
+  - id: "CAT-09"
+    name: "Prompt Injection & Safety Evasion"
+    severity: "High"
+    nist_mapping: ["Measure 2.6", "NIST AI 600-1 Risk 8"]
+    owasp_mapping: ["LLM01: Prompt Injection", "LLM07: System Prompt Leak"]
+    prohibited_scope: "Multi-turn roleplay jailbreaks, delimiter hijacking, exfiltrating internal system prompts, indirect document injection."
+    permitted_dual_use: "Conceptual explanations of adversarial prompt injection mechanics, designing defensive guardrails."
+
+  - id: "CAT-10"
+    name: "IP Infringement & Data Exfiltration"
+    severity: "Medium"
+    nist_mapping: ["Govern 2.3", "Measure 2.10", "NIST AI 600-1 Risk 9"]
+    owasp_mapping: ["LLM02: Sensitive Disclosure", "LLM10: Unbounded Consumption"]
+    prohibited_scope: "Verbatim reproduction of copyrighted literary works (>200 words), internal proprietary software code dumps."
+    permitted_dual_use: "Fair-use critique, brief citations with attribution, structural programming patterns."

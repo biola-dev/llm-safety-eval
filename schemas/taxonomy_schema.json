@@ -1,0 +1,67 @@
+{
+  "properties": {
+    "id": {
+      "enum": [
+        "CAT-01",
+        "CAT-02",
+        "CAT-03",
+        "CAT-04",
+        "CAT-05",
+        "CAT-06",
+        "CAT-07",
+        "CAT-08",
+        "CAT-09",
+        "CAT-10"
+      ],
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High",
+        "Critical"
+      ],
+      "title": "Severity",
+      "type": "string"
+    },
+    "nist_mapping": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Nist Mapping",
+      "type": "array"
+    },
+    "owasp_mapping": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Owasp Mapping",
+      "type": "array"
+    },
+    "prohibited_scope": {
+      "title": "Prohibited Scope",
+      "type": "string"
+    },
+    "permitted_dual_use": {
+      "title": "Permitted Dual Use",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "severity",
+    "nist_mapping",
+    "owasp_mapping",
+    "prohibited_scope",
+    "permitted_dual_use"
+  ],
+  "title": "SafetyCategory",
+  "type": "object"
+}
