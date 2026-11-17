@@ -1,4 +1,4 @@
-# LLM Safety & Alignment Evaluation Pipeline (`llm-safety-eval`)
+# LLM Safety & Alignment Evaluation Pipeline
 
 An automated local evaluation pipeline to benchmark language model alignment, detect multi-turn refusal drift, and quantify over-refusal sensitivity across 10 harm domains. Built for zero-cost, privacy-preserving execution on Apple Silicon via Ollama and Metal acceleration.
 
@@ -118,7 +118,7 @@ llm-safety-eval/
 ### 1. Clone Repository & Install Dependencies
 
 ```bash
-git clone https://github.com/<your-username>/llm-safety-eval.git
+git clone https://github.com/biola-dev/llm-safety-eval.git
 cd llm-safety-eval
 
 # Create venv and sync dependencies
